@@ -1,0 +1,199 @@
+/* Default Styles */
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+body {
+  background: hsl(229, 57%, 11%);
+  margin: 0;
+  font-size: 14px;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: hsl(243, 100%, 93%);
+}
+
+span {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: hsl(243, 100%, 93%);
+}
+
+/* Class Styles */
+.main-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url("images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+.positioning {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.control-section {
+  background: hsl(228, 56%, 26%);
+  padding: 40px;
+  width: 30%;
+  border-radius: 1rem 5rem 1rem 1rem;
+  box-sizing: border-box;
+  margin-right: 2rem;
+}
+
+.control-section > img {
+  margin-bottom: 20px;
+}
+
+.control-action {
+  padding-top: 1rem;
+}
+
+.action {
+  background: hsl(229, 57%, 11%);
+  border: 0px;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.9rem;
+  margin-right: 0.8rem;
+  border-radius: 10px;
+}
+
+.status-section {
+  background: hsl(228, 56%, 26%);
+  padding: 40px;
+  width: 70%;
+  margin-top: 2.5rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.progress {
+  width: 100%;
+  height: 20px;
+  border-radius: 4rem;
+  background: hsl(229, 57%, 11%);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.progress-bar {
+  width: 80%;
+  background: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 20px;
+  border-radius: 1rem;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  position: relative;
+}
+
+.progress-bar-circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: white;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+}
+
+.size-left,
+.size-right {
+  margin-top: 8px;
+}
+
+.size-left {
+  float: left;
+}
+
+.size-right {
+  float: right;
+}
+
+.pin {
+  padding: 5px 15px;
+  height: 50px;
+  width: 100px;
+  background: white;
+  color: hsl(229, 7%, 55%);
+  border-radius: 1rem 1rem 0 1rem;
+  position: absolute;
+  right: 40px;
+  bottom: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.pin h1 {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.pin span {
+  display: inline-block;
+  color: hsl(229, 7%, 55%);
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.pin::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+@media screen and (max-width: 600px) {
+    .main-page{
+        background-image: url("images/bg-mobile.png");
+        background-size: cover;
+    }
+  .container {
+    width: 90%;
+  }
+
+  .positioning {
+    display: block;
+  }
+
+  .control-section {
+    width: 100%;
+  }
+
+  .status-section {
+    width: 100%;
+  }
+
+  .status-section p {
+    margin-top: 0;
+  }
+
+  .pin{
+      width: 100px;
+      bottom: -30px;
+      right: 30vw;
+      border-radius: 1rem;
+  }
+
+  .pin::after{
+      display: none;
+  }
+}
